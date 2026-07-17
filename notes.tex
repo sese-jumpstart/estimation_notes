@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\geometry{margin=1in}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyfoot[L]{\small \textit{Estimation Problems, Bryan}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\small \textit{Last Edit: 7/10/2026}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\title{Estimation Problem Introduction}
+\author{Sean Bryan\\\textit{Arizona State University}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{fancy}
+
+\section{Estimation Problems}
+
+Estimating the answer to a problem is an extremely useful skill. Everyone can do this individually, in groups, and both individuals and groups can practice this skill to keep improving. Creativity and the willingness to write down numbers that you don't know yet is key!
+
+For some problems, like estimating the total addressable market of a new product or service, this style of estimate is nearly the last word. For other problems, like physics, astronomy, geology, or other SESE fields, having an estimate to start is key to guiding a fancier calculation and/or measurement to come. The theoretical physicist John Wheeler succinctly made this point when he famously would say:
+
+\begin{center}
+    \textbf{\textit{``Never start a calculation without first knowing the answer.''}}
+\end{center}
+
+\section{Piano Tuners in Chicago}
+
+The quintessential estimation problem, also known as a Fermi problem named for Enrico Fermi, is the question ``how many piano tuners are there in the city of Chicago?'' At first glance, that seems like a difficult thing to determine. Would we need to go around and ask millions of people what their profession was? Would we need to get access to tax records? It seems hard to know exactly.
+
+Perhaps it is hard to know exactly, but there are several approaches to creating a useful estimate.
+
+Before starting in earnest, we first pause and make a rough initial guess at what the number is. Is it one? Is it a billion? Likely neither, but let's narrow down the range just a little. How many people live in Chicago? It must be some fraction of that, maybe one in few thousand? That would imply a few thousand piano tuners in Chicago. Let's not use this as our final answer, but let's keep it in mind as we proceed.
+
+The next step is to brainstorm about what factors we need to multiply together to get from what we know to what we want to know. One possible approach is to first determine the number of piano tunings that need to take place in Chicago. One way to estimate that would be to calculate:
+\begin{equation}
+(\textrm{\# People in Chicago})\times\frac{\textrm{\# Pianists}}{\textrm{Person}}\times\frac{\textrm{\# Pianos}}{\textrm{Pianist}}\times\frac{\textrm{\# Tunings}}{\textrm{Piano, per Year}} \approx \frac{\textrm{\# Tunings}}{\textrm{Year}}
+\end{equation}
+
+Plugging in some rough numbers ($10^6, 0.1, 0.25~\textit{since there are electronic pianos now}, 0.5$) yields 12,500 tunings per year in Chicago.
+
+If they work very dilligently, one piano tuner could possibly perform
+
+\begin{equation}
+\frac{\textrm{52 - 4 Weeks}}{\textrm{Year}}\times\frac{\textrm{40 hours}}{\textrm{Week}}\times\frac{\textrm{1 Tuning}}{\textrm{4 hours}} \approx 480~\frac{\textrm{Tunings}}{\textrm{Year}}.
+\end{equation}
+
+That means there would need to be approximately $12,500 / 480 = 31$ piano tuners in Chicago. Is this number close to your initial guess? Why or why not?
+
+Reddit says that the Yellow Pages lists 83 piano tuners in Chicago. What term(s) would you adjust if you wanted the estimate to match that number more closely?
+
+\section{More Estimation Problems}
+
+To review, the process of an estimation problem is to first briefly pause and make a really rough initial guess, with the goal of being correct to within a factor of 100. (So, for the last problem, any initial guess of a few dozen to many thousands, would have been great.) Then after that write down a list of 3-8 factors that multiply together (and have the right units in the end!) to yield an estimate. Make up numbers for those factors, and multiply them out. More often than not, the ``errors'' assumed on the numerical value of each factor will end up alternating, and the final answer will often be right within a factor of 10.
+
+Here is a list of more estimation problems to try. Give them a try on your own and in a group, ask AI afterwards for what it thinks, and see if any of them have a ``real'' answer in the literature. Practicing developing your own rough first pass at a problem is a very useful skill. This is true especially in an age defined by AI that rapidly shifts between being insightful in one moment and hallucinating in the next.
+
+\subsection{Problems}
+\indent \indent General Problem \#1) How much water is used by all the showers in the Phoenix metro in a single day? How much water is sitting in all of the swimming pools in the Phoenix metro right now? Compare the two numbers.
+
+General Problem \#2) How many physical books are in ASU Hayden library on the public shelves right now?
+
+Computing Problem \#1) A certain computer code takes 0.5 s of computer time on your laptop to analyze the data for one galaxy. How many dollars should you budget for computing to analyze the data for 100 million galaxies? Include in the estimate that you will need to do debugging and analysis of simulated data to build confidence in the results.
+
+Computing Problem \#2) How many bits per second are human users uploading onto the internet at this moment?
+
+Astronomy/Remote Sensing Problem) Assume that the sun puts out about $10^{26}$ W of optical power. How many meters away could the sun be yet you could still see it with 10,000 photons per second?
+
+Geology Problem) Estimate the diameter of a grain of sand. How many grains of sand are in a cubic foot? How many are on one mile of beach?
+
+\end{document}
